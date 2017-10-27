@@ -59,4 +59,6 @@ angular
 ```
 
 * Configurar o __Callback URL__ do __Application__ no WSO2 para a rota __/totvsWso2Token__
-![token](totvs-wso2-login/img/totvswso2token.PNG)
+![token](https://github.com/devtotvs/totvs-wso2-login/raw/master/img/totvswso2token.PNG)
+Com path:
+![tokenpath](https://github.com/devtotvs/totvs-wso2-login/raw/master/img/totvswso2tokenpath.PNG)

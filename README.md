@@ -22,7 +22,7 @@
 
 * Incluir o __[ngCookies](https://docs.angularjs.org/api/ngCookies)__ versão 1.3.20 no projeto. Exemplo com CDN:
 ``` html
-	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.20/angular-cookies.js"></script>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.20/angular-cookies.js"></script>
 ```
 
 * Incluir o module __totvsWso2Login__ no __totvs-app.module.js__
@@ -38,6 +38,7 @@ angular
         'totvsDesktop'
     ]);
 ```
+O module cria a rota __/totvsWso2Token__ e configura o __[$locationProvider.html5Mode(true)](https://docs.angularjs.org/#html5-mode)__ dessa forma as rotas do AngularJS deixam de usar o # (o WSO2 não aceita esse caracter no __Callback URL__)
 
 * Incluir o __TotvsWso2OauthProvider__ no __totvs-app.config.js__
 ``` js
@@ -56,3 +57,5 @@ angular
             });
     }
 ```
+
+* Configurar o __Callback URL__ do __Application__ no WSO2 para a rota __/totvsWso2Token__

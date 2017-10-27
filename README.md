@@ -62,3 +62,9 @@ angular
 ![token](https://github.com/devtotvs/totvs-wso2-login/raw/master/img/totvswso2token.PNG)
 Com path:
 ![tokenpath](https://github.com/devtotvs/totvs-wso2-login/raw/master/img/totvswso2tokenpath.PNG)
+
+# Processo de login
+
+* O redirecionamento para a página de login do WSO2 ocorrerá no retorno com erro 401 das chamadas REST
+
+* Após o login o WSO2 enviará o access token para o callback URL, que será guardado no cookie e inserido no header das próximas requisições

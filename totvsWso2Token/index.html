@@ -1,0 +1,57 @@
+<html>
+	<head>
+		<script>
+			function setCookie(cname, cvalue) {
+				document.cookie = cname + "=" + cvalue + ";path=" + location.pathname.substring(0, location.pathname.indexOf('totvsWso2Token'));
+			}
+
+			function getCookie(cname) {
+				var name = cname + "=";
+				var decodedCookie = decodeURIComponent(document.cookie);
+				var ca = decodedCookie.split(';');
+				var value;
+				for(var i = 0; i <ca.length; i++) {
+					var c = ca[i];
+					while (c.charAt(0) == ' ') {
+						c = c.substring(1);
+					}
+					if (c.indexOf(name) == 0) {
+						value = c.substring(name.length, c.length);
+						if (value.indexOf('"') == 0) {
+							value = value.substring(1, value.length - 1);
+						}
+						return value;
+					}
+				}
+				return "";
+			}
+
+			var params = location.hash.substr(1).split('&'),
+				accessToken,
+                tokenType;
+
+			for (var i = 0; i < params.length; i++) {
+				var queryParam = params[i].split('=');
+
+				if (queryParam.length > 1) {
+					switch (queryParam[0]) {
+					case 'access_token':
+						accessToken = queryParam[1];
+						break;
+
+					case 'token_type':
+						tokenType = queryParam[1];
+						break;
+					}
+				}
+			}
+
+            if (accessToken && tokenType) {
+				setCookie('totvsWso2Token', accessToken);
+				setCookie('totvsWso2Type', tokenType);
+            }
+
+			location.replace(getCookie('totvsWso2Redirect'));
+		</script>
+	</head>
+</html>

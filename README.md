@@ -38,7 +38,10 @@ angular
         'totvsDesktop'
     ]);
 ```
-O module cria a rota __/totvsWso2Token__ e configura o __[$locationProvider.html5Mode(true)](https://docs.angularjs.org/#html5-mode)__ dessa forma as rotas do AngularJS deixam de usar o # (o WSO2 não aceita esse caracter no __Callback URL__)
+
+* Para utilizar # na rota do AngularJS copiar o mapear a pasta totvsWso2Token no web server (o index.html trata os parametros enviados pelo WSO2 com informacoes do token)
+
+* Para utilizar __sem__ # na rota configurar o __[$locationProvider.html5Mode(true)](https://docs.angularjs.org/#html5-mode)__ no __totvs-app.config.js__
 
 * Incluir o __TotvsWso2OauthProvider__ no __totvs-app.config.js__ informando o endereço de autenticação do WSO2 e o consumer key da application
 ``` js

@@ -39,7 +39,7 @@ angular
     ]);
 ```
 
-* Para utilizar # na rota do AngularJS copiar o mapear a pasta totvsWso2Token no web server (o index.html trata os parametros enviados pelo WSO2 com informacoes do token)
+* Para utilizar # na rota do AngularJS copiar e mapear a pasta __totvsWso2Token__ no web server (o index.html trata os parametros enviados pelo WSO2 com informacoes do token)
 
 * Para utilizar __sem__ # na rota configurar o __[$locationProvider.html5Mode(true)](https://docs.angularjs.org/#html5-mode)__ no __totvs-app.config.js__
 

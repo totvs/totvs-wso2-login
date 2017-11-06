@@ -2,6 +2,8 @@
 
 ## Configuração do projeto
 
+* Copiar no diretório do WSO2 o arquivo __war__ da pasta __repository__ para aplicar o estilo da TOTVS na página de login
+
 * Incluir no __index.html__ a tag __`<base href="/"/>`__ caso tenha path usar como o exemplo __`<base href="/totvseai-monitor"/>`__
 ``` html
 <!DOCTYPE html>

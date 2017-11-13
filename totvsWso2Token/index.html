@@ -37,10 +37,12 @@
 					switch (queryParam[0]) {
 					case 'access_token':
 						accessToken = queryParam[1];
+						console.log('WSO2 access token: ' + accessToken);
 						break;
 
 					case 'token_type':
 						tokenType = queryParam[1];
+						console.log('WSO2 token type: ' + tokenType);
 						break;
 					}
 				}
